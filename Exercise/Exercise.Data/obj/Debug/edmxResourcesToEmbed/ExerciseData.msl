@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExerciseDataStoreContainer" CdmEntityContainer="ExerciseDataContainer">
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="IsTypeOf(ExerciseData.Student)">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="EnrollmentDate" ColumnName="EnrollmentDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enrollment">
+      <EntityTypeMapping TypeName="IsTypeOf(ExerciseData.Enrollment)">
+        <MappingFragment StoreEntitySet="Enrollment">
+          <ScalarProperty Name="EnrollmentId" ColumnName="EnrollmentId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="StudentStudentId" ColumnName="StudentStudentId" />
+          <ScalarProperty Name="CourseCourseId" ColumnName="CourseCourseId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course">
+      <EntityTypeMapping TypeName="IsTypeOf(ExerciseData.Course)">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="CourseId" ColumnName="CourseId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Credits" ColumnName="Credits" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

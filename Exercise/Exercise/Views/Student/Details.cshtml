@@ -1,0 +1,43 @@
+﻿@model Exercise.Models.StudentView
+
+@{
+    ViewBag.Title = "Detalle estudiante";
+}
+
+<h2>Detalle estudiante</h2>
+
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new {  id = Model.StudentId }) |
+    @Html.ActionLink("Regresar a la lista", "Index")
+</p>

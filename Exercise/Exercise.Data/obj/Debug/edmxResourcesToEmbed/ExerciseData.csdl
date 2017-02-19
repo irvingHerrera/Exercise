@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ExerciseData" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ExerciseDataContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Student" EntityType="ExerciseData.Student" />
+    <EntitySet Name="Enrollment" EntityType="ExerciseData.Enrollment" />
+    <EntitySet Name="Course" EntityType="ExerciseData.Course" />
+    <AssociationSet Name="StudentEnrollment" Association="ExerciseData.StudentEnrollment">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Enrollment" EntitySet="Enrollment" />
+    </AssociationSet>
+    <AssociationSet Name="CourseEnrollment" Association="ExerciseData.CourseEnrollment">
+      <End Role="Course" EntitySet="Course" />
+      <End Role="Enrollment" EntitySet="Enrollment" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="EnrollmentDate" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="Enrollment" Relationship="ExerciseData.StudentEnrollment" FromRole="Student" ToRole="Enrollment" />
+  </EntityType>
+  <EntityType Name="Enrollment">
+    <Key>
+      <PropertyRef Name="EnrollmentId" />
+    </Key>
+    <Property Name="EnrollmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentId" Type="Int32" Nullable="false" />
+    <Property Name="CourseId" Type="Int32" Nullable="false" />
+    <Property Name="Grade" Type="String" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="ExerciseData.StudentEnrollment" FromRole="Enrollment" ToRole="Student" />
+    <Property Name="StudentStudentId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Course" Relationship="ExerciseData.CourseEnrollment" FromRole="Enrollment" ToRole="Course" />
+    <Property Name="CourseCourseId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Course">
+    <Key>
+      <PropertyRef Name="CourseId" />
+    </Key>
+    <Property Name="CourseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" />
+    <Property Name="Credits" Type="String" Nullable="false" />
+    <NavigationProperty Name="Enrollment" Relationship="ExerciseData.CourseEnrollment" FromRole="Course" ToRole="Enrollment" />
+  </EntityType>
+  <Association Name="StudentEnrollment">
+    <End Type="ExerciseData.Student" Role="Student" Multiplicity="1" />
+    <End Type="ExerciseData.Enrollment" Role="Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="StudentStudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CourseEnrollment">
+    <End Type="ExerciseData.Course" Role="Course" Multiplicity="1" />
+    <End Type="ExerciseData.Enrollment" Role="Enrollment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Course">
+        <PropertyRef Name="CourseId" />
+      </Principal>
+      <Dependent Role="Enrollment">
+        <PropertyRef Name="CourseCourseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

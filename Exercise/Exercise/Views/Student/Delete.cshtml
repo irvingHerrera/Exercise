@@ -1,0 +1,49 @@
+﻿@model Exercise.Models.StudentView
+
+@{
+    ViewBag.Title = "Eliminar estudiante";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estas seguro de eliminar a este estudiante?</h3>
+<div>
+    <h4>Estudiante @Html.DisplayNameFor(model => model.FirstName)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-warning" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>

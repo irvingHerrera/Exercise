@@ -1,0 +1,11 @@
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Business.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Business.pdb
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Data.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Entities.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\EntityFramework.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Data.pdb
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\Exercise.Entities.pdb
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\bin\Debug\EntityFramework.xml
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\obj\Debug\Exercise.Business.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\obj\Debug\Exercise.Business.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Business\obj\Debug\Exercise.Business.pdb

@@ -1,0 +1,10 @@
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\Exercise.Entities.dll.config
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\Exercise.Entities.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\Exercise.Entities.pdb
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\EntityFramework.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\EntityFramework.xml
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\obj\Debug\Exercise.Entities.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\obj\Debug\Exercise.Entities.dll
+C:\Users\usuario\Source\Repos\Test\Exercise\Exercise.Entities\obj\Debug\Exercise.Entities.pdb
